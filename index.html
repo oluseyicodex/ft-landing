@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Finchglow Travel - Exclusive Promo Fares</title>
   <style>
-    /* FT Brand Colors */
+    /* FT Brand Colors Updated */
     :root {
-      --primary-color: #003366;  /* Deep Blue */
-      --secondary-color: #0099CC; /* Vibrant Blue */
-      --accent-color: #FFCC00;    /* Warm Gold */
-      --background-color: #F5F5F5;/* Light Grey */
-      --text-color: #333333;      /* Dark Text */
+      --primary-color: #002D4F;    /* Primary */
+      --secondary-color: #ED3237;  /* Secondary */
+      --alternate-color: #4DC8F4;  /* Alternate (used as accent) */
+      --background-color: #F5F5F5;   /* Light Grey */
+      --text-color: #333333;       /* Dark Text */
       --white: #FFFFFF;
     }
 
@@ -34,12 +34,18 @@
       padding: 20px;
       text-align: center;
     }
+    header img {
+      max-height: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
     header p {
       font-size: 1.2em;
+      margin: 5px 0 0;
     }
 
     /* Hero Section */
@@ -79,7 +85,7 @@
       margin-bottom: 20px;
     }
     .cta-button {
-      background-color: var(--accent-color);
+      background-color: var(--alternate-color);
       color: var(--primary-color);
       border: none;
       padding: 15px 30px;
@@ -137,7 +143,7 @@
     .countdown {
       font-size: 2em;
       font-weight: bold;
-      background-color: var(--accent-color);
+      background-color: var(--alternate-color);
       color: var(--primary-color);
       padding: 10px 20px;
       border-radius: 5px;
@@ -189,7 +195,7 @@
       font-size: 0.9em;
     }
     footer a {
-      color: var(--accent-color);
+      color: var(--alternate-color);
       margin: 0 5px;
     }
 
@@ -203,8 +209,9 @@
   </style>
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header Section with Logo -->
   <header>
+    <img src="https://finchglowtravels.com/assets/finchglow-logo-BsluSIb6.png" alt="Finchglow Travel Logo">
     <h1>Finchglow Travel</h1>
     <p>Exclusive Promo Fares for Discerning Travelers</p>
   </header>
