@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finchglow Travel - Exclusive Promo Fares</title>
+  <style>
+    /* FT Brand Colors */
+    :root {
+      --primary-color: #003366;  /* Deep Blue */
+      --secondary-color: #0099CC; /* Vibrant Blue */
+      --accent-color: #FFCC00;    /* Warm Gold */
+      --background-color: #F5F5F5;/* Light Grey */
+      --text-color: #333333;      /* Dark Text */
+      --white: #FFFFFF;
+    }
+
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /* Header Section */
+    header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('hero-image.jpg'); /* Replace with an actual image URL */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 400px;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .cta-button {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: var(--secondary-color);
+      color: var(--white);
+    }
+
+    /* Section Container */
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .feature {
+      background-color: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .feature h3 {
+      color: var(--primary-color);
+    }
+
+    /* Promotional Offer Section */
+    .promo {
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+    .promo h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .promo p {
+      font-size: 1.2em;
+    }
+    .countdown {
+      font-size: 2em;
+      font-weight: bold;
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .testimonial {
+      background-color: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-style: italic;
+    }
+    .testimonial p:last-child {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Final Call-to-Action Section */
+    .final-cta {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .final-cta h2 {
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .final-cta p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: var(--accent-color);
+      margin: 0 5px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .features, .testimonials {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Finchglow Travel</h1>
+    <p>Exclusive Promo Fares for Discerning Travelers</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Unlock Exclusive Promo Fares</h2>
+      <p>Experience extraordinary travel opportunities at unbeatable rates.</p>
+      <a href="#booking" class="cta-button">Book Now – Limited Offers</a>
+    </div>
+  </section>
+
+  <!-- Features & Benefits Section -->
+  <section class="section features">
+    <div class="feature">
+      <h3>Unrivaled Savings</h3>
+      <p>Enjoy deeply discounted fares that allow you to travel more while spending less. With Finchglow Travel, every journey is a smart investment in luxury.</p>
+    </div>
+    <div class="feature">
+      <h3>Premium Service</h3>
+      <p>Experience world-class hospitality that ensures your travel is seamless, comfortable, and memorable.</p>
+    </div>
+    <div class="feature">
+      <h3>Tailored Itineraries</h3>
+      <p>Our travel experts craft personalized itineraries that perfectly align with your lifestyle and preferences.</p>
+    </div>
+    <div class="feature">
+      <h3>Trusted Partnerships</h3>
+      <p>We collaborate with industry leaders to guarantee a consistently superior travel experience.</p>
+    </div>
+  </section>
+
+  <!-- Promotional Offer Section -->
+  <section class="promo">
+    <h2>Exclusive Limited-Time Promo</h2>
+    <p>Act now to secure up to <strong>[X%]</strong> off on selected destinations.</p>
+    <div class="countdown" id="countdown">00:00:00</div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials">
+    <div class="testimonial">
+      <p>"Finchglow Travel's promo fares allowed me to explore dream destinations without compromise. The service was impeccable and truly memorable."</p>
+      <p>- A Satisfied Traveler</p>
+    </div>
+    <div class="testimonial">
+      <p>"The unbeatable savings combined with personalized itineraries made my journey unforgettable. Finchglow is synonymous with excellence."</p>
+      <p>- A Frequent Explorer</p>
+    </div>
+  </section>
+
+  <!-- Final Call-to-Action Section -->
+  <section class="final-cta" id="booking">
+    <h2>Embrace a New Era of Travel</h2>
+    <p>Secure your exclusive promo fare now and redefine your travel narrative with Finchglow Travel.</p>
+    <a href="#booking" class="cta-button">Book Now – Secure Your Fare</a>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Finchglow Travel. All Rights Reserved.</p>
+    <p>
+      <a href="#">About Us</a> |
+      <a href="#">Destinations</a> |
+      <a href="#">Special Offers</a> |
+      <a href="#">Contact</a> |
+      <a href="#">FAQ</a>
+    </p>
+  </footer>
+
+  <!-- Optional JavaScript for Countdown Timer -->
+  <script>
+    // Countdown timer functionality
+    function startCountdown(duration, display) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = hours + ":" + minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = 0;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      // Set promo duration to 1 hour (3600 seconds) for demo purposes
+      const promoDuration = 3600;
+      const display = document.getElementById('countdown');
+      startCountdown(promoDuration, display);
+    };
+  </script>
+</body>
+</html>
