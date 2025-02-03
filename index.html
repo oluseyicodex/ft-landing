@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Finchglow Travel - Hot Deals</title>
-  <!-- Google Fonts: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Finchglow Travel - Exclusive Promo Fares</title>
   <style>
     /* FT Brand Colors Updated */
     :root {
@@ -16,103 +14,167 @@
       --text-color: #333333;       /* Dark Text */
       --white: #FFFFFF;
     }
-    * { box-sizing: border-box; }
+
+    /* Global Styles */
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
-      overflow-x: hidden;
+      line-height: 1.6;
     }
-    a { text-decoration: none; color: inherit; }
-    
-    /* HEADER */
+    a {
+      text-decoration: none;
+    }
+
+    /* Header Section */
     header {
       background-color: var(--primary-color);
-      padding: 15px 20px;
+      color: var(--white);
+      padding: 20px;
       text-align: center;
     }
     header img {
-      max-height: 50px;
-      margin-bottom: 5px;
+      max-height: 60px; /* Reduced logo size for a modern look */
+      display: block;
+      margin: 0 auto 10px;
     }
     header h1 {
       margin: 0;
-      font-size: 1.5em;
-      font-weight: 600;
-      color: var(--white);
+      font-size: 2.5em;
     }
-    
-    /* HERO SECTION */
+    header p {
+      font-size: 1.2em;
+      margin: 5px 0 0;
+    }
+
+    /* Hero Section */
     .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?luxury,travel'); /* Replace with your preferred image */
+      background-size: cover;
+      background-position: center;
       position: relative;
-      height: 80vh;
-      background: url('https://source.unsplash.com/1600x900/?luxury,travel') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 400px;
       color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
     }
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     .hero-content {
       position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 20px;
+      z-index: 1;
+      padding: 0 20px;
     }
-    .hero-content h2 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      font-weight: 600;
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
-    .hero-content p {
+    .hero p {
       font-size: 1.2em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
-    .hero-content .cta-button {
+    .cta-button {
       background-color: var(--alternate-color);
       color: var(--primary-color);
-      padding: 15px 30px;
-      border-radius: 5px;
-      font-size: 1em;
       border: none;
+      padding: 15px 30px;
+      font-size: 1em;
       cursor: pointer;
+      border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-    .hero-content .cta-button:hover {
+    .cta-button:hover {
       background-color: var(--secondary-color);
       color: var(--white);
     }
-    
-    /* DEALS SECTION */
-    .deals {
-      padding: 60px 20px;
+
+    /* Section Container */
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Features & Benefits Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .feature {
       background-color: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .feature h3 {
+      color: var(--primary-color);
+    }
+
+    /* Promotional Offer Section */
+    .promo {
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+    .promo h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .promo p {
+      font-size: 1.2em;
+    }
+    .countdown {
+      font-size: 2em;
+      font-weight: bold;
+      background-color: var(--alternate-color);
+      color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* [NEW] Deals Section */
+    .deals {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
       text-align: center;
     }
     .deals h2 {
       font-size: 2.5em;
       color: var(--primary-color);
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .deals-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-around;
+      gap: 20px;
     }
     .deal-card {
       background-color: var(--white);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 5px;
       width: 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
     .deal-card:hover {
@@ -122,42 +184,78 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
+      border-radius: 5px 5px 0 0;
     }
     .deal-info {
-      padding: 20px;
+      padding: 15px;
       text-align: left;
     }
     .deal-info h3 {
-      font-size: 1.5em;
-      margin: 0 0 10px;
       color: var(--primary-color);
+      margin: 0 0 10px;
+      font-size: 1.3em;
     }
     .deal-info p {
-      font-size: 1em;
-      margin: 0 0 15px;
+      font-size: 0.9em;
+      margin: 0 0 10px;
       color: var(--text-color);
     }
     .deal-timer {
       font-size: 1em;
-      margin-bottom: 15px;
+      font-weight: bold;
       color: var(--secondary-color);
-      font-weight: 600;
+      margin-bottom: 10px;
     }
     .act-now-button {
       display: inline-block;
       background-color: var(--alternate-color);
       color: var(--primary-color);
-      padding: 10px 20px;
+      padding: 10px 15px;
       border-radius: 5px;
-      font-size: 1em;
+      font-size: 0.9em;
       transition: background-color 0.3s ease;
     }
     .act-now-button:hover {
       background-color: var(--secondary-color);
       color: var(--white);
     }
-    
-    /* FOOTER */
+
+    /* Testimonials Section */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .testimonial {
+      background-color: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-style: italic;
+    }
+    .testimonial p:last-child {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Final Call-to-Action Section */
+    .final-cta {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .final-cta h2 {
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    .final-cta p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Section */
     footer {
       background-color: var(--primary-color);
       color: var(--white);
@@ -169,72 +267,117 @@
       color: var(--alternate-color);
       margin: 0 5px;
     }
-    
-    /* RESPONSIVE */
+
+    /* Responsive Styles */
     @media (max-width: 768px) {
-      .deals-grid {
+      .features, .testimonials, .deals-grid {
         flex-direction: column;
         align-items: center;
-      }
-      .hero-content h2 {
-        font-size: 2.5em;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- Header Section with Logo -->
   <header>
     <img src="https://finchglowtravels.com/assets/finchglow-logo-BsluSIb6.png" alt="Finchglow Travel Logo">
+    <h1>Finchglow Travel</h1>
+    <p>Exclusive Promo Fares for Discerning Travelers</p>
   </header>
-  
-  <!-- HERO SECTION -->
+
+  <!-- Hero Section with Lead Capture -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Discover Unbeatable Travel Deals</h2>
-      <p>Exclusive promotions for your dream destinations. Act fast—limited-time offers available now.</p>
-      <button class="cta-button">Explore Deals</button>
+      <h2>Unlock Exclusive Promo Fares</h2>
+      <p>Experience extraordinary travel opportunities at unbeatable rates.</p>
+      <a href="#booking" class="cta-button">Book Now – Limited Offers</a>
     </div>
   </section>
-  
-  <!-- DEALS SECTION -->
-  <section class="deals">
+
+  <!-- Features & Benefits Section -->
+  <section class="section features">
+    <div class="feature">
+      <h3>Unrivaled Savings</h3>
+      <p>Enjoy deeply discounted fares that allow you to travel more while spending less. With Finchglow Travel, every journey is a smart investment in luxury.</p>
+    </div>
+    <div class="feature">
+      <h3>Premium Service</h3>
+      <p>Experience world-class hospitality that ensures your travel is seamless, comfortable, and memorable.</p>
+    </div>
+    <div class="feature">
+      <h3>Tailored Itineraries</h3>
+      <p>Our travel experts craft personalized itineraries that perfectly align with your lifestyle and preferences.</p>
+    </div>
+    <div class="feature">
+      <h3>Trusted Partnerships</h3>
+      <p>We collaborate with industry leaders to guarantee a consistently superior travel experience.</p>
+    </div>
+  </section>
+
+  <!-- Promotional Offer Section -->
+  <section class="promo">
+    <h2>Exclusive Limited-Time Promo</h2>
+    <p>Act now to secure up to <strong>[X%]</strong> off on selected destinations.</p>
+    <div class="countdown" id="countdown">00:00:00</div>
+  </section>
+
+  <!-- [NEW] Deals Section -->
+  <section class="section deals">
     <h2>Hot Deals</h2>
     <div class="deals-grid">
       <!-- Deal Card 1 -->
       <div class="deal-card" data-duration="21600">
-        <img src="https://source.unsplash.com/400x300/?beach,holiday" alt="Tropical Paradise">
+        <img src="https://source.unsplash.com/300x200/?beach,holiday" alt="Tropical Paradise">
         <div class="deal-info">
           <h3>Tropical Paradise Getaway</h3>
           <p>Save up to 40% on your dream vacation.</p>
-          <div class="deal-timer">Deal ends in: <span class="countdown"></span></div>
+          <div class="deal-timer">Deal ends in: <span class="countdown-deal">00:00:00</span></div>
           <a href="#" class="act-now-button">Act Now</a>
         </div>
       </div>
       <!-- Deal Card 2 -->
       <div class="deal-card" data-duration="14400">
-        <img src="https://source.unsplash.com/400x300/?mountain,resort" alt="Mountain Escape">
+        <img src="https://source.unsplash.com/300x200/?mountain,resort" alt="Mountain Escape">
         <div class="deal-info">
           <h3>Mountain Escape Retreat</h3>
           <p>Enjoy a serene getaway with 35% off.</p>
-          <div class="deal-timer">Deal ends in: <span class="countdown"></span></div>
+          <div class="deal-timer">Deal ends in: <span class="countdown-deal">00:00:00</span></div>
           <a href="#" class="act-now-button">Act Now</a>
         </div>
       </div>
       <!-- Deal Card 3 -->
       <div class="deal-card" data-duration="28800">
-        <img src="https://source.unsplash.com/400x300/?city,travel" alt="City Lights Adventure">
+        <img src="https://source.unsplash.com/300x200/?city,travel" alt="City Lights Adventure">
         <div class="deal-info">
           <h3>City Lights Adventure</h3>
           <p>Experience urban excitement with 30% off.</p>
-          <div class="deal-timer">Deal ends in: <span class="countdown"></span></div>
+          <div class="deal-timer">Deal ends in: <span class="countdown-deal">00:00:00</span></div>
           <a href="#" class="act-now-button">Act Now</a>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- FOOTER -->
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials">
+    <div class="testimonial">
+      <p>"Finchglow Travel's promo fares allowed me to explore dream destinations without compromise. The service was impeccable and truly memorable."</p>
+      <p>- A Satisfied Traveler</p>
+    </div>
+    <div class="testimonial">
+      <p>"The unbeatable savings combined with personalized itineraries made my journey unforgettable. Finchglow is synonymous with excellence."</p>
+      <p>- A Frequent Explorer</p>
+    </div>
+  </section>
+
+  <!-- Final Call-to-Action Section -->
+  <section class="final-cta" id="booking">
+    <h2>Embrace a New Era of Travel</h2>
+    <p>Secure your exclusive promo fare now and redefine your travel narrative with Finchglow Travel.</p>
+    <a href="#booking" class="cta-button">Book Now – Secure Your Fare</a>
+  </section>
+
+  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 Finchglow Travel. All Rights Reserved.</p>
     <p>
@@ -245,13 +388,13 @@
       <a href="#">FAQ</a>
     </p>
   </footer>
-  
-  <!-- COUNTDOWN TIMER SCRIPT -->
+
+  <!-- JavaScript for Countdown Timers on Deal Cards -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.deal-card').forEach(function(card) {
         var duration = parseInt(card.getAttribute('data-duration'), 10); // duration in seconds
-        var countdownElement = card.querySelector('.countdown');
+        var countdownElement = card.querySelector('.countdown-deal');
         var endTime = Date.now() + duration * 1000;
         var interval = setInterval(function() {
           var now = Date.now();
